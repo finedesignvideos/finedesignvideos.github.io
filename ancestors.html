@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Plotting a 3D function using P5.js.</title>
+<meta name="description" content="Experimental 3D function plotter, using the p5.js library." /> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* { margin:0; padding:0; }
+body {overflow: hidden; }
+#myContainer, canvas { position:relative; width:100%; height:100%; }
+canvas { cursor:grab; }
+header { position:absolute; top:0; left:0; display:block; width:100%; text-align:left; padding-top:20px; z-index:10; }
+h1 { margin-bottom:10px; }
+footer { position:absolute; bottom:0; left:0; display:block; width:100%; text-align:right; padding-bottom:20px; z-index:10; }
+footer ul { padding:10px 0; list-style-type:none; }
+footer ul li { display:inline; } 
+</style>
+</head>
+<body>
+<div id='myContainer'>
+<header>
+	<h1>Plotting the real outputs of</h1>
+    <h1>(x^degree + 1/x^degree)/2</h1>
+	<noscript>JavaScript is disabled</noscript>
+	<p>"Drag" to rotate the plot.</p>
+	<p>Degree slider: <input type="range" width="100%" min="1" max="500" value="100" id="degslider" oninput="degreechange()"><span id="degval">1</span></p>
+    <p style='color:red'>Start angle: <input type="range" width="50%" min="-500" max="500" value="0" id="minangle" oninput="rangechange()"><span id="minangval">0</span>π</p>
+    <p style='color:blue'>End angle: <input type="range" width="50%" min="-500" max="500" value="200" id="maxangle" oninput="rangechange()"><span id="maxangval">2</span>π</p>
+	<p>This file uses the <a href="https://p5js.org">p5.js</a> library.</p>
+</header>
+<footer>
+	Plotting code taken from <a href="https://library.fridoverweij.com/codelab/3d_function_plotter/index.html">Frido Verweij</a>
+</footer>
+</div>
+<!-- Include P5.js -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script> -->
+<script src="p5.min.js"></script>
+<script>
+"use strict";
+
+var fscale = 24; // a scale factor
+// nodes settings
+var nodeColour = "#666600";
+var nodeSize = 2;
+var xMin = -9;
+var xMax = 9;
+var yMin = -9;
+var yMax = 9;
+var rMax=10;
+var dx = 0.2; // x distance between nodes
+var dy = 0.2; // y distance between nodes
+var nodes, nodesAxes;
+var widthCanvas, heightCanvas;
+var angMin=0, angMax=2*Math.PI;
+var deg=1;
+
+// the function to be plotted
+function f(x,y)	{
+    return (5*Math.sin(Math.sqrt(x*x+y*y)))/(Math.sqrt(x*x+y*y));
+};
+
+function createRing(startang,endang) {
+    var dtheta = .01;
+    var ret = Array();
+    var n=0;
+    for(var ang=startang;ang<endang;ang+=dtheta){
+        var c=(ang-angMin)/(angMax-angMin);
+        var h = Math.cos(deg*ang);
+        ret[n] = [Math.cos(ang),-Math.sin(ang),h,c];
+        ++n;
+    }
+    return ret;
+};
+
+function createArm(ang) {
+    var dx = .1;
+    var ret = Array();
+    var n=0;
+    var c=(ang-angMin)/(angMax-angMin);
+    for(var i=.5;i<rMax;i+=dx){
+        var h = Math.cos(deg*ang)*(i**deg + i**-deg)/2;
+        if(h>rMax || h<-rMax) break;
+        ret[n] = [i*Math.cos(ang),-i*Math.sin(ang),h,c];
+        ++n;
+    }
+    for(var i=1;i<rMax;i+=dx){
+        var h = (i-(i*i-1)**.5)**(1/deg);
+        if(h>rMax || h<-rMax) break;
+        ret[n] = [h*Math.cos(ang),-h*Math.sin(ang),Math.cos(deg*ang)*i,c];
+        ++n;
+    }
+    for(var i=1;i<rMax;i+=dx){
+        var h = (i+(i*i-1)**.5)**(1/deg);
+        if(h>rMax || h<-rMax) break;
+        ret[n] = [h*Math.cos(ang),-h*Math.sin(ang),Math.cos(deg*ang)*i,c];
+        ++n;
+    }
+    return ret;
+};
+
+function createPoints(){
+    nodes = Array();
+    nodes = nodes.concat(createRing(angMin,angMax));
+    for(var i=Math.ceil(angMin*deg/Math.PI);i<=Math.floor(angMax*deg/Math.PI);i++){
+        nodes = nodes.concat(createArm(i*Math.PI/deg));
+    }
+    nodesAxes = [[0,0,0],[xMax,0,0],[0,yMax,0],[0,0,xMax]];
+	rotateX3D(295 * Math.PI / 180);	
+	rotateY3D(30 * Math.PI / 180);
+};
+
+function setup() {
+  widthCanvas = windowWidth; // windowWidth p5.js?
+  heightCanvas = windowHeight; // windowHeight p5.js?
+  //widthCanvas = window.innerWidth;
+  //heightCanvas = window.innerHeight;  
+  var myCanvas = createCanvas(widthCanvas, heightCanvas);
+  myCanvas.parent('myContainer'); // p5.js method?
+  //myCanvas.appendChild('myContainer');
+  createPoints();
+};
+
+function windowResized() {
+  widthCanvas = windowWidth; // windowWidth p5.js?
+  heightCanvas = windowHeight; // windowHeight p5.js?
+  resizeCanvas(widthCanvas, heightCanvas);
+  //makeFunctionNodes();
+};
+
+function functionNodesConstructor() {
+	// filling the nodes array with function points [x,y,z] where z = f(x,y).
+	var i = 0;
+	this.nodes = new Array();
+	for (var x = xMin; x <= xMax; x += dx) {
+		for (var y = yMin; y <= yMax; y += dy) {
+			this.nodes[i] = [x, y, x];
+			++i;
+		}
+	}
+};
+
+function makeFunctionNodes() {
+	var shape = new functionNodesConstructor();
+	nodes = shape.nodes;
+	nodesAxes = [[0,0,0],[xMax,0,0],[0,yMax,0],[0,0,xMax]];
+	rotateX3D(295 * Math.PI / 180);	
+	rotateY3D(30 * Math.PI / 180);
+	//rotateZ3D(30 * Math.PI / 180);	
+};
+
+// Rotate shape around the z-axis
+function rotateZ3D(theta) {
+	//if (window.console && window.console.log) { console.log("rotZ="+theta) }
+    var sinTheta = Math.sin(theta);
+    var cosTheta = Math.cos(theta);
+    
+    for (var n=0; n<nodes.length; n++) {
+        var node = nodes[n];
+        var x = node[0];
+        var y = node[1];
+        node[0] = x * cosTheta - y * sinTheta;
+        node[1] = y * cosTheta + x * sinTheta;
+    }
+    for (n=0; n<nodesAxes.length; n++) {
+        node = nodesAxes[n];
+        x = node[0];
+        y = node[1];
+        node[0] = x * cosTheta - y * sinTheta;
+        node[1] = y * cosTheta + x * sinTheta;
+    }	
+};
+
+// Rotate shape around the y-axis
+function rotateY3D(theta) {
+	//if (window.console && window.console.log) { console.log("rotY="+theta) }
+    var sinTheta = Math.sin(-theta);
+    var cosTheta = Math.cos(-theta);
+    
+    for (var n=0; n<nodes.length; n++) {
+        var node = nodes[n];
+        var x = node[0];
+        var z = node[2];
+        node[0] = x * cosTheta - z * sinTheta;
+        node[2] = z * cosTheta + x * sinTheta;
+    }
+    for (n=0; n<nodesAxes.length; n++) {
+        node = nodesAxes[n];
+        x = node[0];
+        z = node[2];
+        node[0] = x * cosTheta - z * sinTheta;
+        node[2] = z * cosTheta + x * sinTheta;
+    }		
+};
+
+// Rotate shape around the x-axis
+function rotateX3D(theta) {
+	//if (window.console && window.console.log) { console.log("rotX="+theta) }
+    var sinTheta = Math.sin(-theta);
+    var cosTheta = Math.cos(-theta);
+    
+    for (var n=0; n<nodes.length; n++) {
+        var node = nodes[n];
+        var y = node[1];
+        var z = node[2];
+        node[1] = y * cosTheta - z * sinTheta;
+        node[2] = z * cosTheta + y * sinTheta;
+    }
+    for (n=0; n<nodesAxes.length; n++) {
+        node = nodesAxes[n];
+        y = node[1];
+        z = node[2];
+        node[1] = y * cosTheta - z * sinTheta;
+        node[2] = z * cosTheta + y * sinTheta;
+    }	
+};
+
+function draw() { // By default, p5.js loops through draw() continuously at 60 frames per second, which is quite a load for the processor.
+
+	var backgroundColour = color(255, 255, 255);	
+    background(backgroundColour); // overdraws the previous orientations at the loop rate
+	translate(widthCanvas/2, heightCanvas/2); // shift the canvas widthCanvas/2 px right and heightCanvas/2 px down, so position (0,0) is at the center of the canvas
+	
+    // Draw nodes
+    //fill(nodeColour);
+	noStroke();
+	// sort the nodes by their z value so that the "deepest" nodes are drawn first and those closest to the viewer are drawn last. 
+	// nodes.sort(function(a, b){return a[2]-b[2]});		
+	for (var i=0; i < nodes.length; i++) {
+        var c=nodes[i][3]
+        fill(Math.floor(255*(1-c)),0,Math.floor(255*c));
+		var px = nodes[i][0];
+		var py = nodes[i][1];
+		// the "pixels" are small rectangles which is faster than rendering small circles.
+		rect(px*fscale,py*fscale,nodeSize,nodeSize)
+	}
+	
+	// Draw axes
+	stroke('gray');
+	fill('gray');
+	textSize(16);
+	line(-nodesAxes[1][0]*fscale,-nodesAxes[1][1]*fscale,nodesAxes[1][0]*fscale,nodesAxes[1][1]*fscale);
+	text("Real",nodesAxes[1][0]*fscale,nodesAxes[1][1]*fscale);
+	line(-nodesAxes[2][0]*fscale,-nodesAxes[2][1]*fscale,nodesAxes[2][0]*fscale,nodesAxes[2][1]*fscale);
+	text("Imaginary",-nodesAxes[2][0]*fscale,-nodesAxes[2][1]*fscale);	
+	line(nodesAxes[0][0]*fscale,nodesAxes[0][1]*fscale,nodesAxes[3][0]*fscale,nodesAxes[3][1]*fscale);
+	text("Output",nodesAxes[3][0]*fscale,nodesAxes[3][1]*fscale);
+
+};
+
+function mouseDragged() {
+	rotateY3D((mouseX - pmouseX) * Math.PI / 180);
+	rotateX3D((mouseY - pmouseY) * Math.PI / 180);
+	};
+function touchMoved() {
+	rotateY3D((mouseX - pmouseX) * Math.PI / 180);
+	rotateX3D((mouseY - pmouseY) * Math.PI / 180);
+	// prevent default
+	return false;		
+	};	
+
+function degreechange(){
+    var d = document.getElementById("degslider").value;
+    deg = d/100;
+    document.getElementById('degval').innerHTML=d/100;
+    createPoints();
+}
+function rangechange(){
+    var mina = document.getElementById("minangle").value/100;
+    var maxa = document.getElementById("maxangle").value/100;
+    document.getElementById('minangval').innerHTML=mina;
+    document.getElementById('maxangval').innerHTML=maxa;
+    angMin = mina*Math.PI;
+    angMax = maxa*Math.PI;
+    createPoints();
+}
+</script>
+</body></html> 
