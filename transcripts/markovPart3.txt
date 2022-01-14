@@ -1,39 +1,234 @@
-Here is the graph of half times x + 1/x. And we can change it to half times x^2 + 1/x^2. The left portion disappears in the middle of the transformation because you're taking roots of a negative number. Although their expressions look similar to polynomials, none of them look anything like polynomials or even trigonometric sums. So WHY does our mythology choose these people as our ancient ancestors? I remember having this same question as a kid. I would ask the village elders and it never bothered them, because sa they said, the mythology is not real. That response used to infuriate me. There must be some reason for this mythology. It's such an irrational response to just say it's not real. Heh, get it? It's irrational because it's not real. Wait, no, that doesn't work. Irrational numbers are real. If it's not real, then that would make it...
+Here is the graph of half times x + 1/x. And we can change it to half times x^2 
++ 1/x^2. The left portion disappears in the middle of the transformation 
+because you're taking roots of a negative number. Although their expressions 
+look similar to polynomials, none of them look anything like polynomials or 
+even trigonometric sums. So WHY does our mythology choose these people as our 
+ancient ancestors? I remember having this same question as a kid. I would ask 
+the village elders and it never bothered them, because sa they said, the 
+mythology is not real. That response used to infuriate me. There must be some 
+reason for this mythology. It's such an irrational response to just say it's 
+not real. Heh, get it? It's irrational because it's not real. Wait, no, that 
+doesn't work. Irrational numbers are real. If it's not real, then that would 
+make it...
 
 TITLE CARD
 
 ...then that would make it complex. Huh.
 
-When we plotted half times x + 1/x, we only plotted it for the real values of x. What happens when you plot it even for complex values of x? We'll do a small intro to complex numbers, but before that let's see what the plot will look like. The input is no longer just the real number line, but instead it's the whole complex plane. The output of the function at each point can also be complex numbers, so they can't be represented by just a height like we were using earlier. Luckily for our plot all we're going to do is find out at which points the function outputs a real number, and plot only those points. So our inputs will be on the plane and the outputs will still be plotted as just a height. And when we do that, this is what we see. Now let's change the power from 1 to 2. And look at that! Arms are moving around in the complex plane, explaining how they popped in and out of the real graph. This plot isn't complete though, there's still new arms being abruptly created and that makes sense if you learn about branch cuts. I'll leave a link in the description to a really good series by Mathemaniac for learning more about complex functions. For us though, those arms are not what we're interested in. That thing in the middle there is what we're after! As you might have noticed, it looks like a sum of cosines drawn on a cylindrical surface!
+When we plotted half times x + 1/x, we only plotted it for the real values of 
+x. What happens when you plot it even for complex values of x? We'll do a small 
+intro to complex numbers, but before that let's see what the plot will look 
+like. The input is no longer just the real number line, but instead it's the 
+whole complex plane. The output of the function at each point can also be 
+complex numbers, so they can't be represented by just a height like we were 
+using earlier. Luckily for our plot all we're going to do is find out at which 
+points the function outputs a real number, and plot only those points. So our 
+inputs will be on the plane and the outputs will still be plotted as just a 
+height. And when we do that, this is what we see. Now let's change the power 
+from 1 to 2. And look at that! Arms are moving around in the complex plane, 
+explaining how they popped in and out of the real graph. This plot isn't 
+complete though, there's still new arms being abruptly created and that makes 
+sense if you learn about branch cuts. I'll leave a link in the description to a 
+really good series by Mathemaniac for learning more about complex functions. 
+For us though, those arms are not what we're interested in. That thing in the 
+middle there is what we're after! As you might have noticed, it looks like a 
+sum of cosines drawn on a cylindrical surface!
 
-To find out why that is, let's do a quick intro to complex numbers. Let's look at the plane of complex numbers. The x-axis here holds all the real numbers. These are the numbers whose imaginary component is zero. The imaginary component of a number is just its y-coordinate on this plane. Complex numbers with a real component x and imaginary component y are written as x + y times i. The point here with just an imaginary component of 1 is just called i. Now I'm going to define addition and multiplication for complex numbers. Addition is easy, to find the sum of two complex numbers you just add the real components separately and the imaginary components separately. This is the same as what you do for vector addition in 2D. This is a natural definition. There's a zero, that is a number which doesn't make any difference when added to another number. The sum a+b is the same as b+a, which you can verify by calculation or by thinking of them as vectors. The sum a+(b+c) is the same as (a+b)+c, which is true because it's true for the real compoenent and for the imaginary component. And for any number a, there is a number we call the negative of a, such that their sum is zero. Now subtraction can be defined as just addition with the negative of a number.
+To find out why that is, let's do a quick intro to complex numbers. Let's look 
+at the plane of complex numbers. The x-axis here holds all the real numbers. 
+These are the numbers whose imaginary component is zero. The imaginary 
+component of a number is just its y-coordinate on this plane. Complex numbers 
+with a real component x and imaginary component y are written as x + y times i. 
+The point here with just an imaginary component of 1 is just called i. Now I'm 
+going to define addition and multiplication for complex numbers. Addition is 
+easy, to find the sum of two complex numbers you just add the real components 
+separately and the imaginary components separately. This is the same as what 
+you do for vector addition in 2D. This is a natural definition. There's a zero, 
+that is a number which doesn't make any difference when added to another 
+number. The sum a+b is the same as b+a, which you can verify by calculation or 
+by thinking of them as vectors. The sum a+(b+c) is the same as (a+b)+c, which 
+is true because it's true for the real compoenent and for the imaginary 
+component. And for any number a, there is a number we call the negative of a, 
+such that their sum is zero. Now subtraction can be defined as just addition 
+with the negative of a number.
 
-Multiplication is quite simple too. This point i, which has no real component, and an imaginary component of 1, when multipled by itself, is -1. To multiply two complex numbers, you can just expand this expression. We'll get 2 times 3, plus 2 times i, plus -i times 3, plus -i times i. We change i^2 to -1, put the real terms together and the imaginary terms together and we get the answer. It might seem like we just have to blindly follow the calculation to find out the answer, but hidden in this calculation is a very intuitive structure. For this we need to think of these complex numbers as vectors again. I can specify the complex number by the length of the vector, and the angle it makes with the x-axis. Let's do this for both the vectors we want to multiply, and let's just call the angles the red angle and blue angle so we don't have messy numbers. With the length and the angle, we can find the real and imaginary components using basic trigonometry. They are just length times the cosine of the angle and length times the sine of the angle. When written in this form, the multiplication becomes insightful. When we expand the multiplication and group the real and imaginary components, we get this. Do pause and verify it if you haven't seen it before. Using trigonometric identities that we saw in the previous video, this simplifies further. And suddenly we can see that the product is a complex number with length being the product of the two lengths, and angle being the sum of the two angles. This is often an easier way to think of the multiplication and it is very useful.
+Multiplication is quite simple too. This point i, which has no real component, 
+and an imaginary component of 1, when multipled by itself, is -1. To multiply 
+two complex numbers, you can just expand this expression. We'll get 2 times 3, 
+plus 2 times i, plus -i times 3, plus -i times i. We change i^2 to -1, put the 
+real terms together and the imaginary terms together and we get the answer. It 
+might seem like we just have to blindly follow the calculation to find out the 
+answer, but hidden in this calculation is a very intuitive structure. For this 
+we need to think of these complex numbers as vectors again. I can specify the 
+complex number by the length of the vector, and the angle it makes with the 
+x-axis. Let's do this for both the vectors we want to multiply, and let's just 
+call the angles the red angle and blue angle so we don't have messy numbers. 
+With the length and the angle, we can find the real and imaginary components 
+using basic trigonometry. They are just length times the cosine of the angle 
+and length times the sine of the angle. When written in this form, the 
+multiplication becomes insightful. When we expand the multiplication and group 
+the real and imaginary components, we get this. Do pause and verify it if you 
+haven't seen it before. Using trigonometric identities that we saw in the 
+previous video, this simplifies further. And suddenly we can see that the 
+product is a complex number with length being the product of the two lengths, 
+and angle being the sum of the two angles. This is often an easier way to think 
+of the multiplication and it is very useful.
 
-And this multiplication is very nice as well. There is a one, that is a number which doesn't make any difference when multiplied to another number. a times b is the same as b times a, because it doens't matter in which order you multiply the lengths and add the angles. The same reasoning shows that a times (b times c) is the same as (a times b) times c. Every complex number, except for zero, has a multiplicative inverse, that is a number you can multiply it with to get the answer 1. The length of the inverse should be 1/the length of the number so that the resulting length is 1. And the angle of the inverse should be the negative of the angle of the number so that the sum of the angles is 0. Division can be defined as just multiplication by the inverse of a number. Finally we have distributivity. a times (b plus c) is a times b plus a times c. Let the red point be a, the blue one b and the purple one c. Since we're multiplying with a, let's write a in its length and angle form. On the right hand side what we're doing is adding b and c, we know how to do that, and then multiplying it with a, which means scaling by the length of a, and then rotating by the angle of a. On the right hand side, we are multiplying b and c with a separately. So each one gets scaled by the length of a, and then rotated by the angle of a. And then when them up, we get the same exact answer. So multiplication and addition are very nicely structured for complex numbers. And that ends our introduction to complex numbers.
+And this multiplication is very nice as well. There is a one, that is a number 
+which doesn't make any difference when multiplied to another number. a times b 
+is the same as b times a, because it doens't matter in which order you multiply 
+the lengths and add the angles. The same reasoning shows that a times (b times 
+c) is the same as (a times b) times c. Every complex number, except for zero, 
+has a multiplicative inverse, that is a number you can multiply it with to get 
+the answer 1. The length of the inverse should be 1/the length of the number so 
+that the resulting length is 1. And the angle of the inverse should be the 
+negative of the angle of the number so that the sum of the angles is 0. 
+Division can be defined as just multiplication by the inverse of a number. 
+Finally we have distributivity. a times (b plus c) is a times b plus a times c. 
+Let the red point be a, the blue one b and the purple one c. Since we're 
+multiplying with a, let's write a in its length and angle form. On the right 
+hand side what we're doing is adding b and c, we know how to do that, and then 
+multiplying it with a, which means scaling by the length of a, and then 
+rotating by the angle of a. On the right hand side, we are multiplying b and c 
+with a separately. So each one gets scaled by the length of a, and then rotated 
+by the angle of a. And then when them up, we get the same exact answer. So 
+multiplication and addition are very nicely structured for complex numbers. And 
+that ends our introduction to complex numbers.
 
-Now if you remember, this white circle here is actually the function we were plotting. Half times x plus 1/x. let's go back to x+1/x and look at what it does when x is a complex number whose distance is 1, since that's where the interesting part of the plot is. Let's use ctheta to refer to the point on this unit circle at an angle theta. If we're computing our function at this point, we'll want to know what 1/x is. So where is 1/ctheta? ctheta had length 1, so 1/ctheta will also have length 1. ctheta had angle theta, so 1/ctheta should have angle -theta. When you add up ctheta and 1/ctheta, the imaginary components cancel out. What you have left is the sum of their real components, which would be cos(theta) + cos(theta). So the function value is this divided by 2, which is cos(theta). So yes, this simple complex function was actually plotting cos(theta) on a cylinder. What about half times x^2+1/x^2. Again, let's calculate it when x is ctheta. To compute x^2, we multiply the lengths, which remains 1, and add the angles, which becomes 2theta. So ctheta^2 is c2theta, or cos(2theta) + sin(2theta) times i. By the same argument as before 1/ctheta^2 would be the point with angle -2theta. Again if we add them up and divide by 2, the imaginary parts cancel and we'd be left with cos(2theta). Clearly a similar story will play out for other degrees.
+Now if you remember, this white circle here is actually the function we were 
+plotting. Half times x plus 1/x. let's go back to x+1/x and look at what it 
+does when x is a complex number whose distance is 1, since that's where the 
+interesting part of the plot is. Let's use ctheta to refer to the point on this 
+unit circle at an angle theta. If we're computing our function at this point, 
+we'll want to know what 1/x is. So where is 1/ctheta? ctheta had length 1, so 
+1/ctheta will also have length 1. ctheta had angle theta, so 1/ctheta should 
+have angle -theta. When you add up ctheta and 1/ctheta, the imaginary 
+components cancel out. What you have left is the sum of their real components, 
+which would be cos(theta) + cos(theta). So the function value is this divided 
+by 2, which is cos(theta). So yes, this simple complex function was actually 
+plotting cos(theta) on a cylinder. What about half times x^2+1/x^2. Again, 
+let's calculate it when x is ctheta. To compute x^2, we multiply the lengths, 
+which remains 1, and add the angles, which becomes 2theta. So ctheta^2 is 
+c2theta, or cos(2theta) + sin(2theta) times i. By the same argument as before 
+1/ctheta^2 would be the point with angle -2theta. Again if we add them up and 
+divide by 2, the imaginary parts cancel and we'd be left with cos(2theta). 
+Clearly a similar story will play out for other degrees.
 
-With this, we have our third representation of polynomials, so let's recall them now. We started with polynomials, which are combinations of 1,x,x^2, and so on. I've mentioned real there to specify that these combinations can involve real numbers but are not to involve complex numbers. Then we saw that every polynomial is a projection of a sum of cosines and versa. Here a sum of cosines means a real combination of 1, cos(theta), cos(2theta) and so on. And just now we saw that plotting a sum of cosines is exactly the same as plotting a specific kinf od complex function, which we'll call ancestors here because they're Trigidadian ancestors according to Trigidadian mythology. Ancestors are a real combination of 1, half times x+1/x, half times x^2+1/x^2, and so on. Here's an example.
+With this, we have our third representation of polynomials, so let's recall 
+them now. We started with polynomials, which are combinations of 1,x,x^2, and 
+so on. I've mentioned real there to specify that these combinations can involve 
+real numbers but are not to involve complex numbers. Then we saw that every 
+polynomial is a projection of a sum of cosines and versa. Here a sum of cosines 
+means a real combination of 1, cos(theta), cos(2theta) and so on. And just now 
+we saw that plotting a sum of cosines is exactly the same as plotting a 
+specific kinf od complex function, which we'll call ancestors here because 
+they're Trigidadian ancestors according to Trigidadian mythology. Ancestors are 
+a real combination of 1, half times x+1/x, half times x^2+1/x^2, and so on. 
+Here's an example.
 
-If might be curious right now about the similarities between ancestors and polynomials, since they look somewhat similar. And we will analyze this in more detail, but first let's take a short look at complex polynomials. Since complex numbers can be added and subtracted and multiplied and they have all those nice properties we saw earlier, we can write polynomial-like expressions and they will make sense as functions where the inputs are complex numbers. Even the coefficients can be complex numbers and all the operations make sense. Since we've seen that division also makes sense, we can actually do things like factoring the polynomial. The analysis for complex polynomials and the real polynomials that we might be more comfortable with can be very similar. In fact, they can be so similar that we can even say that two different degree 5 complex polynomials cannot intersect in more than 5 places. The proof for real polynomials goes through as is for complex polynomials too. I won't show the proof in this video, but I might show it in a bonus video. And just to be really explicit about what I mean by a complex polynomial, I just mean a complex combination of 1,x,x^2 and so on.
+If might be curious right now about the similarities between ancestors and 
+polynomials, since they look somewhat similar. And we will analyze this in more 
+detail, but first let's take a short look at complex polynomials. Since complex 
+numbers can be added and subtracted and multiplied and they have all those nice 
+properties we saw earlier, we can write polynomial-like expressions and they 
+will make sense as functions where the inputs are complex numbers. Even the 
+coefficients can be complex numbers and all the operations make sense. Since 
+we've seen that division also makes sense, we can actually do things like 
+factoring the polynomial. The analysis for complex polynomials and the real 
+polynomials that we might be more comfortable with can be very similar. In 
+fact, they can be so similar that we can even say that two different degree 5 
+complex polynomials cannot intersect in more than 5 places. The proof for real 
+polynomials goes through as is for complex polynomials too. I won't show the 
+proof in this video, but I might show it in a bonus video. And just to be 
+really explicit about what I mean by a complex polynomial, I just mean a 
+complex combination of 1,x,x^2 and so on.
 
-So our ancestors aren't complex polynomials. They have terms like 1/x and 1/x^2 that also appear. So let's give a term for polynomials that also include these terms, let's call them fake polynomials. In this video, a fake polynomial is a complex combination of 1,x,1/x,x^2,1/x^2 and so on. When I say the degree of a fake polynomial,  just mean the largest power of x that appears, even if it's in a denominator. So ancestrs are clearly fake polynomials, although not all fake polynomials are ancestors. Now let's relate fake polynomials and complex polynomials.
+So our ancestors aren't complex polynomials. They have terms like 1/x and 1/x^2 
+that also appear. So let's give a term for polynomials that also include these 
+terms, let's call them fake polynomials. In this video, a fake polynomial is a 
+complex combination of 1,x,1/x,x^2,1/x^2 and so on. When I say the degree of a 
+fake polynomial,  just mean the largest power of x that appears, even if it's 
+in a denominator. So ancestrs are clearly fake polynomials, although not all 
+fake polynomials are ancestors. Now let's relate fake polynomials and complex 
+polynomials.
 
-Let's start by taking 2 different fake polynomials of degree 5. Now let's multiply both of them by x^5. Since every term in the fake polynomial is being multiplied by x^5, the new terms can have degree as large as 10, since you get x^10 when you multiply x^5 to an x^5 term. Or they can have degree as small as 0, since you get 1 when you multiply x^5 to a 1/x^5 term. So what you have now are two convex combinations of 1,x,and so on till x^10. You have two degree 10 complex polynomials. What's more, if the two fake polynomials had the same value at some input a, then the resulting complex polynomials will also have the same value at the point a. So the number of intersections of the two does not decrease. But we know the 2 degree 10 polynomials cannot intersect more than 10 times. That means that the 2 degree 5 fake polynomials could also not intersect more than 10 times.
+Let's start by taking 2 different fake polynomials of degree 5. Now let's 
+multiply both of them by x^5. Since every term in the fake polynomial is being 
+multiplied by x^5, the new terms can have degree as large as 10, since you get 
+x^10 when you multiply x^5 to an x^5 term. Or they can have degree as small as 
+0, since you get 1 when you multiply x^5 to a 1/x^5 term. So what you have now 
+are two convex combinations of 1,x,and so on till x^10. You have two degree 10 
+complex polynomials. What's more, if the two fake polynomials had the same 
+value at some input a, then the resulting complex polynomials will also have 
+the same value at the point a. So the number of intersections of the two does 
+not decrease. But we know the 2 degree 10 polynomials cannot intersect more 
+than 10 times. That means that the 2 degree 5 fake polynomials could also not 
+intersect more than 10 times.
 
-That's right, fake polynomials have a limit to the number of times they can intersect. The Shev is back in business.
+That's right, fake polynomials have a limit to the number of times they can 
+intersect. The Shev is back in business.
 
-As mentioned in part 2, all that the Shev has to do now is to show that a sum of cosines, up to cos(5theta), that stays within -1 and 1, cannot have a slope larger than 5. Since plotting sums of cosines on a cylinder is the same as plotting an ancestor on the complex plane, let's plot the ancestor. So here's a contesting ancestor that claims to be of degree 5 and has a slope larger than 5. In comes the Shev, in its newest form. Since it's being plotted on the full cylinder, it has 10 arcs. The Shev already knows what to do, it's done something like this before. First it multiplies itself by a constant slightly larger than 1, so that the contestant has to pass through each of the 10 arcs, with the contestant still having a higher slope than the enlarged Shev. Then teh enlarged Shev changes itself again, this time replacing all the x's with ctheta times x for some value of theta which we'll see later. When you compute this new function on input a, you get this. This is also what you get when computing the old function on input ctheta times a. ctheta has length 1 and angle theta. when you multiply it with some complex number a, you're just rotating a by an angle theta. So whatever the old function did is being done by the new function as well, but at a point that is an angle of theta away. This means that the new function is the same as the old function, but rotated by an angle of theta. And this theta can be chosen so that the two plots intersect at a point where the contestant has a slope larger than 5.
+As mentioned in part 2, all that the Shev has to do now is to show that a sum 
+of cosines, up to cos(5theta), that stays within -1 and 1, cannot have a slope 
+larger than 5. Since plotting sums of cosines on a cylinder is the same as 
+plotting an ancestor on the complex plane, let's plot the ancestor. So here's a 
+contesting ancestor that claims to be of degree 5 and has a slope larger than 
+5. In comes the Shev, in its newest form. Since it's being plotted on the full 
+cylinder, it has 10 arcs. The Shev already knows what to do, it's done 
+something like this before. First it multiplies itself by a constant slightly 
+larger than 1, so that the contestant has to pass through each of the 10 arcs, 
+with the contestant still having a higher slope than the enlarged Shev. Then 
+teh enlarged Shev changes itself again, this time replacing all the x's with 
+ctheta times x for some value of theta which we'll see later. When you compute 
+this new function on input a, you get this. This is also what you get when 
+computing the old function on input ctheta times a. ctheta has length 1 and 
+angle theta. when you multiply it with some complex number a, you're just 
+rotating a by an angle theta. So whatever the old function did is being done by 
+the new function as well, but at a point that is an angle of theta away. This 
+means that the new function is the same as the old function, but rotated by an 
+angle of theta. And this theta can be chosen so that the two plots intersect at 
+a point where the contestant has a slope larger than 5.
 
-Note that this enlarged  and rotated Shev is no longer an ancestor, in part because it has coefficients that are complex numbers. But it still is a fake polynomial of degree 5. So it and the contestant can intersect at most 10 times. We know they intersect at least once at each arc, but at this arc they're intersecting thrice. This is inevitable, if the contestant has a higher slope at the place where it's intersecting, it has to pass through the arc again in order to cross it.
+Note that this enlarged  and rotated Shev is no longer an ancestor, in part 
+because it has coefficients that are complex numbers. But it still is a fake 
+polynomial of degree 5. So it and the contestant can intersect at most 10 
+times. We know they intersect at least once at each arc, but at this arc 
+they're intersecting thrice. This is inevitable, if the contestant has a higher 
+slope at the place where it's intersecting, it has to pass through the arc 
+again in order to cross it.
 
-So that's it. The contestant was forced to intersect 12 times with the enlarged and rotated Shev, but two degree 5 fake polynomials can intersect only 10 times. So we know that the contestant was lying about being a degree-5 ancestor. The Shev has just completed its dominance in the arena. Let's take a look back at the highlights that led the Shev to this point.
+So that's it. The contestant was forced to intersect 12 times with the enlarged 
+and rotated Shev, but two degree 5 fake polynomials can intersect only 10 
+times. So we know that the contestant was lying about being a degree-5 
+ancestor. The Shev has just completed its dominance in the arena. Let's take a 
+look back at the highlights that led the Shev to this point.
 
-In this video the Shev shows that it is the best among all contesting ancestors of degree 5. And that means that it is also the best among all contesting sums of cosines up to cos(5theta). From the previous video we know that means that no contesting polynomial of degree 5 has a slope larger than 25 in the middle portion of the plane. Any slope larger than 25 must be in the areas corresponding to the last arcs of the Shev. But from the first video, we know that no polynomial can have a slope larger than that of the Shev in the last arcs of the Shev. Since the Shev does reach a slope of 25, we can be certain now that no contesting degree 5 polynomial can have a slope larger than Shev has. The Shev is unbeatable.
+In this video the Shev shows that it is the best among all contesting ancestors 
+of degree 5. And that means that it is also the best among all contesting sums 
+of cosines up to cos(5theta). From the previous video we know that means that 
+no contesting polynomial of degree 5 has a slope larger than 25 in the middle 
+portion of the plane. Any slope larger than 25 must be in the areas 
+corresponding to the last arcs of the Shev. But from the first video, we know 
+that no polynomial can have a slope larger than that of the Shev in the last 
+arcs of the Shev. Since the Shev does reach a slope of 25, we can be certain 
+now that no contesting degree 5 polynomial can have a slope larger than Shev 
+has. The Shev is unbeatable.
 
-What about for other degrees though? Let's see how much of this proof works when we replace 5 with some degree d and 25 with d^2. The proof in this video will continue to work to say that the degree-d Shev is best among all ancesors of degree d. That will also continue to hold for sums of cosines. And the proof in part 2 holds too. It will continue to be the case that no contesting degree-d polynomial can have slope larger than d^2 in the middle part of the plane. And slope larger than d^2 must be in the areas correspoding to the last arcs of the Shev. The proof in part 1 will show that no degree-d contestant can have slope larger than that of the Shev in the last arcs of the Shev. And we saw in part 2 that the Shev has slope at least d^2. So in general, it is true that no contesting degree-d polynomial can have a slope larger than the maximum slope of the degree-d Shev.
+What about for other degrees though? Let's see how much of this proof works 
+when we replace 5 with some degree d and 25 with d^2. The proof in this video 
+will continue to work to say that the degree-d Shev is best among all ancesors 
+of degree d. That will also continue to hold for sums of cosines. And the proof 
+in part 2 holds too. It will continue to be the case that no contesting 
+degree-d polynomial can have slope larger than d^2 in the middle part of the 
+plane. And slope larger than d^2 must be in the areas correspoding to the last 
+arcs of the Shev. The proof in part 1 will show that no degree-d contestant can 
+have slope larger than that of the Shev in the last arcs of the Shev. And we 
+saw in part 2 that the Shev has slope at least d^2. So in general, it is true 
+that no contesting degree-d polynomial can have a slope larger than the maximum 
+slope of the degree-d Shev.
 
 : So what's next for the Shev?
-: I thought I'd finally relax, but I've got to rush now. I got a weird letter today, from Society. It's asking me if I can help take on Potential Quantum Brutes. Got to go, bye!
+: I thought I'd finally relax, but I've got to rush now. I got a weird letter 
+today, from Society. It's asking me if I can help take on Potential Quantum 
+Brutes. Got to go, bye!
 

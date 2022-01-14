@@ -2,11 +2,18 @@ Here we are, entering the Shev's hometown of Trigidad and Tobano.
 Trinidad and Tobago
 Trigonad and Tiboda
 
-Umm... why does everybody look different here? These aren't polynomials, they're weird curves that intersect themselves. Where are the polynomials? Oh, I see one near the center! I'll go talk to it first and find out more about these other curves. I don't want to make a fool of myself.
+Umm... why does everybody look different here? These aren't polynomials, 
+they're weird curves that intersect themselves. Where are the polynomials? Oh, 
+I see one near the center! I'll go talk to it first and find out more about 
+these other curves. I don't want to make a fool of myself.
 
-: Hello there, you're the only polynomial I could see. It's my first time here, can you please tell me who all these other people are?
+: Hello there, you're the only polynomial I could see. It's my first time here, 
+can you please tell me who all these other people are?
 
-: Who, me? You think I'm a polynomial and the others aren't? Well, you've made a fool of yourself there, haven't you?. Here, let me show you. You happened to see me from a particular angle. I'm like anybody else here, a sum of cosines drawn on the surface of a half cylinder. Hi, I'm cos(4theta)/3 - cos(3theta)/4
+: Who, me? You think I'm a polynomial and the others aren't? Well, you've made 
+a fool of yourself there, haven't you?. Here, let me show you. You happened to 
+see me from a particular angle. I'm like anybody else here, a sum of cosines 
+drawn on the surface of a half cylinder. Hi, I'm cos(4theta)/3 - cos(3theta)/4
 
 : Whoa! You looked exactly like a polynomial earlier.
 
@@ -14,54 +21,197 @@ Umm... why does everybody look different here? These aren't polynomials, they're
 
 ----
 
-Okay, cos(4theta)/3 - cos(3theta)/4 was kind enough to explain everything to me. It's incredible, just like a polynomial is a combination of 1, x, x^2, x^3 and so on, these people are combinations of 1, cos(theta), cos(2theta), cos(3theta) and so on. And each and every one of them looks exactly like a polynomial from some angle.
+Okay, cos(4theta)/3 - cos(3theta)/4 was kind enough to explain everything to 
+me. It's incredible, just like a polynomial is a combination of 1, x, x^2, x^3 
+and so on, these people are combinations of 1, cos(theta), cos(2theta), 
+cos(3theta) and so on. And each and every one of them looks exactly like a 
+polynomial from some angle.
 
-The same way we plot the values of a polynomial as x goes between -1 and 1, we can plot the values of a sum of cosiness as theta goes between 0 and pi. We plot on this on this cylindrical surface. Here's what it looks like. We could continue plotting it till 2*pi, but it'll just be the mirror image of the part till pi, so there's no need to draw it.
+The same way we plot the values of a polynomial as x goes between -1 and 1, we 
+can plot the values of a sum of cosiness as theta goes between 0 and pi. We 
+plot on this on this cylindrical surface. Here's what it looks like. We could 
+continue plotting it till 2*pi, but it'll just be the mirror image of the part 
+till pi, so there's no need to draw it.
 
-Now here's the fantastic part. Take the plane that is the open side of this half cylinder of radius 1. Let all the drawn points fall onto the plane. What you get on the plane is an actual polynomial curve. Alternately you could just see the sum of cosines from in front of the plane. Once we remove depth distortions, we'll see the polynomial exactly. If you want to see the sum of cosines more clearly, you can also unroll the curved surface into a plane of length pi, and draw the curve there. Let's take a simple curve, like cos(theta)/2. After drawing it, we curve the surface back and view it from the front. And it looks like a straight line!
+Now here's the fantastic part. Take the plane that is the open side of this 
+half cylinder of radius 1. Let all the drawn points fall onto the plane. What 
+you get on the plane is an actual polynomial curve. Alternately you could just 
+see the sum of cosines from in front of the plane. Once we remove depth 
+distortions, we'll see the polynomial exactly. If you want to see the sum of 
+cosines more clearly, you can also unroll the curved surface into a plane of 
+length pi, and draw the curve there. Let's take a simple curve, like 
+cos(theta)/2. After drawing it, we curve the surface back and view it from the 
+front. And it looks like a straight line!
 
-Let's see why this is. We'll take the help of the top view which shows our progress on the curved surface more clearly. We plot starting from theta=0, where its value is 1/2. When viewed from in front, that clearly corresponds to x=1, and y=1/2. When we try to plot it for some other value of theta, what are the x and y values that we see? The y value is simple, it would just be the same as the value of the function being plotted, so the y coordinate in this case would be cos(theta)/2. For the x value, let's look at the top view. As you can see, the x value is the bottom side of the right angled triangle with angle theta. So the x value would be cos(theta). That means we're just seeing the line y=x/2.
+Let's see why this is. We'll take the help of the top view which shows our 
+progress on the curved surface more clearly. We plot starting from theta=0, 
+where its value is 1/2. When viewed from in front, that clearly corresponds to 
+x=1, and y=1/2. When we try to plot it for some other value of theta, what are 
+the x and y values that we see? The y value is simple, it would just be the 
+same as the value of the function being plotted, so the y coordinate in this 
+case would be cos(theta)/2. For the x value, let's look at the top view. As you 
+can see, the x value is the bottom side of the right angled triangle with angle 
+theta. So the x value would be cos(theta). That means we're just seeing the 
+line y=x/2.
 
-cos(theta)/2 was simple, but what about the function cos(2theta)? At angle theta, we're plotting a poitn with the y coordinate being cos(2theta). Again angle theta corresponds to an x coordinate of cos(theta). So how can I write the y value, cos(2theta), in terms of the x value cos(theta)? We just have to recall the trigonometry we learnt at school: cos(2*theta) is actually just 2*cos^2(theta) - 1. So on the plane we're plotting y = 2*x^2 - 1.
+cos(theta)/2 was simple, but what about the function cos(2theta)? At angle 
+theta, we're plotting a poitn with the y coordinate being cos(2theta). Again 
+angle theta corresponds to an x coordinate of cos(theta). So how can I write 
+the y value, cos(2theta), in terms of the x value cos(theta)? We just have to 
+recall the trigonometry we learnt at school: cos(2*theta) is actually just 
+2*cos^2(theta) - 1. So on the plane we're plotting y = 2*x^2 - 1.
 
 ---
 
-Great, so what about functions like cos(3theta)? You can try pausing this and working it out yourself. We know cos(3theta) is cos(2theta)cos(theta) - sin(2theta)sin(theta). Knowing that sin(2theta) is 2sin(theta)cos(theta), this becomes cos(2theta)cos(theta) - 2cos(theta)sin^2(theta). Again sin^2(theta) = 1 - cos^2(theta) and we already know that cos(2theta) is 2cos^2(theta)-1. So now the whole expression is just in terms of cos(theta) and it simplifies to 4cos(theta)^3 - 3cos(theta). So this would give us the polynomial y = 4x^3- 3x
+Great, so what about functions like cos(3theta)? You can try pausing this and 
+working it out yourself. We know cos(3theta) is cos(2theta)cos(theta) - 
+sin(2theta)sin(theta). Knowing that sin(2theta) is 2sin(theta)cos(theta), this 
+becomes cos(2theta)cos(theta) - 2cos(theta)sin^2(theta). Again sin^2(theta) = 1 
+- cos^2(theta) and we already know that cos(2theta) is 2cos^2(theta)-1. So now 
+the whole expression is just in terms of cos(theta) and it simplifies to 
+4cos(theta)^3 - 3cos(theta). So this would give us the polynomial y = 4x^3- 3x
 
-We can use induction to continue along these lines for any cos(ntheta). If you're trying this proof by induction, it would be useful to also prove that sin(ntheta) is sin(theta) times a polynomial in cos(theta). You can carry out these proofs just using the classic trigonometric identities shown here for cos(A+B), sin(A+B), and the one that says sin^2(theta) is 1-cos^2(theta). And all these special polynomials, one for each cos(ntheta), form the family of Shevs.
+We can use induction to continue along these lines for any cos(ntheta). If 
+you're trying this proof by induction, it would be useful to also prove that 
+sin(ntheta) is sin(theta) times a polynomial in cos(theta). You can carry out 
+these proofs just using the classic trigonometric identities shown here for 
+cos(A+B), sin(A+B), and the one that says sin^2(theta) is 1-cos^2(theta). And 
+all these special polynomials, one for each cos(ntheta), form the family of 
+Shevs.
 
-This explains the behaviour of the degree 5 Shev. It's just the polynomial you get by drawing cos(5theta) on the curved surface and looking at it from the front. The properties we marvelled at in the previous episode follow easily. Let's see it here by drawing cos(5theta) on the plane above and tracking what value of x we get using the top view. cos(5theta) starts at 1 when theta is 0, which corresponds to an x value of 1. It goes to -1 when theta is pi/5, which correponds to an x value of cos(pi/5). And it continues in this manner while never going below -1 or above 1. So it has 5 arcs as theta goes from 0 to pi. We've figured out the secret of the Shev. Ah, I hope I still have some things left to ask Shev when I meet it.
+This explains the behaviour of the degree 5 Shev. It's just the polynomial you 
+get by drawing cos(5theta) on the curved surface and looking at it from the 
+front. The properties we marvelled at in the previous episode follow easily. 
+Let's see it here by drawing cos(5theta) on the plane above and tracking what 
+value of x we get using the top view. cos(5theta) starts at 1 when theta is 0, 
+which corresponds to an x value of 1. It goes to -1 when theta is pi/5, which 
+correponds to an x value of cos(pi/5). And it continues in this manner while 
+never going below -1 or above 1. So it has 5 arcs as theta goes from 0 to pi. 
+We've figured out the secret of the Shev. Ah, I hope I still have some things 
+left to ask Shev when I meet it.
 
 ---
 
 : Hey fellows.
-: Hey Shev, we were just getting to know the people here. They explained to me how your movements are so precise. So what have you been doing here on your break?
-: Not much, I've just been practicing inside my own cylindrical arena instead of the plane arena for a change.
-: That's good. So I take it your plan is to first defeat all the polynomials that are projections of sums of cosines, and then to turn your focus to polynomials that aren't projections of sum of cosines?
-: Ah, you still haven't understood it completely. EVERY polynomial is a projection of some sum of cosines. Take the polynomial x^3 for instance. I'll show you how to find out which sum of cosines will give you the polynomial x^3. Let's start with the highest degree term, which here is x^3 since it's the only term. We can get that from cos(3theta)/4, because cos(3theta) starts with a 4cos^3(theta). Now we have x^3 - 3x/4. To make it x^3 we have to add 3x/4. What's important is that this has degree smaller than 3, so we can add cos(2theta)s and cos(theta)s to handle it without affecting the degree 3 term at all. In this case we add 3cos(theta)/4 since that corresponds to 3x/4. So cos(3theta)/4 + 3cos(theta)/4 will give you the polynomial x^3. We could have done this with any polynomial, taking care of the highest degree term first and then lower degree terms until all terms have been accounted for.
-: Wow, that's beautiful. So now you can make any polynomial a sum of cosines and then compete with it in your cylindrical arena! Is it easier to compete in your arena?
-: That's a hard question to answer. There are some peculiarities in this cylindrical arena. There are curves that I easily defeat in my arena but that defeat me in the plane arena. Luckily they're not polynomials but it highlights some of the differences in the arenas.
+: Hey Shev, we were just getting to know the people here. They explained to me 
+how your movements are so precise. So what have you been doing here on your 
+break?
+: Not much, I've just been practicing inside my own cylindrical arena instead 
+of the plane arena for a change.
+: That's good. So I take it your plan is to first defeat all the polynomials 
+that are projections of sums of cosines, and then to turn your focus to 
+polynomials that aren't projections of sum of cosines?
+: Ah, you still haven't understood it completely. EVERY polynomial is a 
+projection of some sum of cosines. Take the polynomial x^3 for instance. I'll 
+show you how to find out which sum of cosines will give you the polynomial x^3. 
+Let's start with the highest degree term, which here is x^3 since it's the only 
+term. We can get that from cos(3theta)/4, because cos(3theta) starts with a 
+4cos^3(theta). Now we have x^3 - 3x/4. To make it x^3 we have to add 3x/4. 
+What's important is that this has degree smaller than 3, so we can add 
+cos(2theta)s and cos(theta)s to handle it without affecting the degree 3 term 
+at all. In this case we add 3cos(theta)/4 since that corresponds to 3x/4. So 
+cos(3theta)/4 + 3cos(theta)/4 will give you the polynomial x^3. We could have 
+done this with any polynomial, taking care of the highest degree term first and 
+then lower degree terms until all terms have been accounted for.
+: Wow, that's beautiful. So now you can make any polynomial a sum of cosines 
+and then compete with it in your cylindrical arena! Is it easier to compete in 
+your arena?
+: That's a hard question to answer. There are some peculiarities in this 
+cylindrical arena. There are curves that I easily defeat in my arena but that 
+defeat me in the plane arena. Luckily they're not polynomials but it highlights 
+some of the differences in the arenas.
 : How's that possible? Can you show me an example?
-: Sure. See this curve that barely increases at all? My maximum slope on the cylinder is 5, and its maximum slope is probably less than 1. I defeat it so easily. But look as we roll the plane into a half cylinder. At this end there's no limit to how steep it becomes. Its slope keeps on increasing, past any number you can think of.
-: Whoa! So even if you defeat all sums of cosines in your cylindrical arena, you still wouldn't have defeated all the polynomials in the actual plane?
-: As it turns out, defeating them in this cylindrical arena is actually enough. But to prove this requires a little bit of analysis. Let's do that now.
+: Sure. See this curve that barely increases at all? My maximum slope on the 
+cylinder is 5, and its maximum slope is probably less than 1. I defeat it so 
+easily. But look as we roll the plane into a half cylinder. At this end there's 
+no limit to how steep it becomes. Its slope keeps on increasing, past any 
+number you can think of.
+: Whoa! So even if you defeat all sums of cosines in your cylindrical arena, 
+you still wouldn't have defeated all the polynomials in the actual plane?
+: As it turns out, defeating them in this cylindrical arena is actually enough. 
+But to prove this requires a little bit of analysis. Let's do that now.
 
 ------
 
-Here's the topview again. Everything drawn on the cylindrical surface gets projected down to the plane. What we want to know is how slopes on the cylindrical surface translate to slopes on the plane. So here's a portion of the cylindrical surface. That portion gets projected to a certain portion of the plane. As we plot our function on the cylindrical portion, the function might have changed its value by some amount. And as we look at the resulting plot on the plane, the function would have changed its value by the exact same amount, since it's merely a projection that preserves the function value of each point. What changes is that the portion on the cylindrical surface has a long arc length during which the function value made its changes. On the plane, the length of the portion is smaller. So in order to have the same change of function value, the plot on the plane must have steeper slopes.
+Here's the topview again. Everything drawn on the cylindrical surface gets 
+projected down to the plane. What we want to know is how slopes on the 
+cylindrical surface translate to slopes on the plane. So here's a portion of 
+the cylindrical surface. That portion gets projected to a certain portion of 
+the plane. As we plot our function on the cylindrical portion, the function 
+might have changed its value by some amount. And as we look at the resulting 
+plot on the plane, the function would have changed its value by the exact same 
+amount, since it's merely a projection that preserves the function value of 
+each point. What changes is that the portion on the cylindrical surface has a 
+long arc length during which the function value made its changes. On the plane, 
+the length of the portion is smaller. So in order to have the same change of 
+function value, the plot on the plane must have steeper slopes.
 
-This is especially stark when we look at portions where theta is close to 0. With the same arc length as before, the resulting portion on the plane is tiny. The change of function value in the arc has to be done in a very short length on the plane.
+This is especially stark when we look at portions where theta is close to 0. 
+With the same arc length as before, the resulting portion on the plane is tiny. 
+The change of function value in the arc has to be done in a very short length 
+on the plane.
 
-Now that we know what causes the change in slope, let's do a proper analysis of how the slope changes. You can pause and do it yourself if you want. Let's take an arbitrary value of theta, and draw a really small arc at that angle. Now let's zoom in so that we can see it clearly. Since it's so small it looks like a straight line. When this small arc is projected, the length of the projection would be what's shown here. We can compare the length of the arc and the projection by noting that they are two sides of a right angled triangle. So the ratio is cos of this angle, but we don't know what angle that is. However, we also know that this angle here is theta. So our unknown angle must be 90-theta. And the ratio of the lengths of the projected portion and the arc is cos(90-theta), or in other words, sin(theta).
+Now that we know what causes the change in slope, let's do a proper analysis of 
+how the slope changes. You can pause and do it yourself if you want. Let's take 
+an arbitrary value of theta, and draw a really small arc at that angle. Now 
+let's zoom in so that we can see it clearly. Since it's so small it looks like 
+a straight line. When this small arc is projected, the length of the projection 
+would be what's shown here. We can compare the length of the arc and the 
+projection by noting that they are two sides of a right angled triangle. So the 
+ratio is cos of this angle, but we don't know what angle that is. However, we 
+also know that this angle here is theta. So our unknown angle must be 90-theta. 
+And the ratio of the lengths of the projected portion and the arc is 
+cos(90-theta), or in other words, sin(theta).
 
-That's the analysis of the slopes. The slope at a point on the plane is 1/sin(theta) times the slope on the cylinder.
+That's the analysis of the slopes. The slope at a point on the plane is 
+1/sin(theta) times the slope on the cylinder.
 
-So you see, I have a maximum slope of 5 in the cylindrical arena. It is still possible for a sum of cosines that I have defeated to have slope larger than 25 in their projection. But this can only happen when sin(theta) is smaller than 1/5. sin(theta) is 0 when theta is 0, and is 1 when theta is pi/2. If I split this interval into 5 equal parts, notice that sin(theta) is smaller than 1/5 only in the part closest to theta=0. That's because it has the steepest slopes there, and so it must increase past 1/5 in that interval. So if a sum of cosines I have defeated in the cylindrical arena has any chance of defeating me in the plane arena, it can only defeat me in these last intervals. BUT! In the previous episode, we showed that no degree 5 polynomial can defeat me in my last arcs. Putting these together, there is no way for a sum of cosines I defeat in the cylindrical surface to defeat me in the plane.
+So you see, I have a maximum slope of 5 in the cylindrical arena. It is still 
+possible for a sum of cosines that I have defeated to have slope larger than 25 
+in their projection. But this can only happen when sin(theta) is smaller than 
+1/5. sin(theta) is 0 when theta is 0, and is 1 when theta is pi/2. If I split 
+this interval into 5 equal parts, notice that sin(theta) is smaller than 1/5 
+only in the part closest to theta=0. That's because it has the steepest slopes 
+there, and so it must increase past 1/5 in that interval. So if a sum of 
+cosines I have defeated in the cylindrical arena has any chance of defeating me 
+in the plane arena, it can only defeat me in these last intervals. BUT! In the 
+previous episode, we showed that no degree 5 polynomial can defeat me in my 
+last arcs. Putting these together, there is no way for a sum of cosines I 
+defeat in the cylindrical surface to defeat me in the plane.
 
-: So, two questions. Firstly, all you have to do now is to show that these sum of cosines up to cos(5theta) can't have a slope larger than 5 while staying between 1 and -1. What's your plan for showing this? And secondly, you seem to have a nice way of finding out slopes of the projections. We know from your polynomial representation that your slope reaches 25 at x=1. How about for the other Shev's in the family? Finding out their polynomial representation adn then differentiating them sounds complicated. Can you analyze their slopes more easily?
+: So, two questions. Firstly, all you have to do now is to show that these sum 
+of cosines up to cos(5theta) can't have a slope larger than 5 while staying 
+between 1 and -1. What's your plan for showing this? And secondly, you seem to 
+have a nice way of finding out slopes of the projections. We know from your 
+polynomial representation that your slope reaches 25 at x=1. How about for the 
+other Shev's in the family? Finding out their polynomial representation adn 
+then differentiating them sounds complicated. Can you analyze their slopes more 
+easily?
 
-: I'll start with the second question. We know that to find my slope at x=1, you just find the slope of cos(5theta) at theta=0 and then divide it by sin(theta). But that'll give you 0/0. So instead you have to find the limit as theta goes to 0. With a little bit of familiarity with differentiation, you'll see the result is 5 times -sin(5theta) divided by sin(theta). Using L'hopital's rule for which I guess you'll provide the viewers a reference, you can differentiate this again and get -25 times cos(5theta) divided by cos(theta). At theta=0, this is just -25. So that's the answer. If you plot me on the cylinder near theta=0 and project it on the plane, the plot will be moving down with a slope of -25 on the plane. And for my degree-$d$ siblings, the same calculation will get you d^2 as the magnitude of their slope.
+: I'll start with the second question. We know that to find my slope at x=1, 
+you just find the slope of cos(5theta) at theta=0 and then divide it by 
+sin(theta). But that'll give you 0/0. So instead you have to find the limit as 
+theta goes to 0. With a little bit of familiarity with differentiation, you'll 
+see the result is 5 times -sin(5theta) divided by sin(theta). Using L'hopital's 
+rule for which I guess you'll provide the viewers a reference, you can 
+differentiate this again and get -25 times cos(5theta) divided by cos(theta). 
+At theta=0, this is just -25. So that's the answer. If you plot me on the 
+cylinder near theta=0 and project it on the plane, the plot will be moving down 
+with a slope of -25 on the plane. And for my degree-$d$ siblings, the same 
+calculation will get you d^2 as the magnitude of their slope.
 
-Now for your first question, yes all I have to do is show that any sum of cosines up to cos(5theta) can't have a slope larger than 5 while staying between 1 and -1 on the cylinder. How will I go about doing that, I honestly don't know. The polynomial view had its plusses. You could shift it around and it would still be a polynomial, that doesn't happen for sums of cosines. And how many times can shifted sums of cosines intersect anyway? We knew that polynomials can intersect only 5 times. I feel like I lose my main tool when I go away from polynomials. But I'm done thinking about it for now. I'll just spend the rest of this holiday at home reliving my childhood instead of breaking my head. There's some mythological works of our people that I loved reading as a kid. Maybe I'll reread those. I remember one very mysterious one in particular, it was called the legend of half times x+1/x.
+Now for your first question, yes all I have to do is show that any sum of 
+cosines up to cos(5theta) can't have a slope larger than 5 while staying 
+between 1 and -1 on the cylinder. How will I go about doing that, I honestly 
+don't know. The polynomial view had its plusses. You could shift it around and 
+it would still be a polynomial, that doesn't happen for sums of cosines. And 
+how many times can shifted sums of cosines intersect anyway? We knew that 
+polynomials can intersect only 5 times. I feel like I lose my main tool when I 
+go away from polynomials. But I'm done thinking about it for now. I'll just 
+spend the rest of this holiday at home reliving my childhood instead of 
+breaking my head. There's some mythological works of our people that I loved 
+reading as a kid. Maybe I'll reread those. I remember one very mysterious one 
+in particular, it was called the legend of half times x+1/x.
 
-: Well, sounds like a great plan for a holiday. Thanks for the interview, I'll see you later!
+: Well, sounds like a great plan for a holiday. Thanks for the interview, I'll 
+see you later!
