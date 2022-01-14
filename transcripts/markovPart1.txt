@@ -1,0 +1,53 @@
+It's the Polynomial Rising Championships! It's the lightweight category, so all our polynomials have to have degree at most 5. Are you ready?
+
+Yes I am! The arena also looks ready. Our contestants are gonna have to plot themselves as their input goes from -1 to 1, and they're not allowed to take a value below -1 or larger than 1. Largest slope in the arena wins.
+
+Yes it does, let's start!
+
+There's the usual contestant, line me up. It needs to increase its degree if it wants to get a slope better than 1.
+
+Here's a new one, violation. That's quite steep, they're measuring the slope, and it's 20, that's a LOT!
+
+Turns out it's a degree 10 polynomial though so it's disqualified.
+Here's an old classic, wiggle wiggle. That's a sporty performance... and a slope of nearly 7, not bad.
+
+Wait, the Shev's contesting here?
+Whoa!
+Whoo(?)
+Damn.
+25, that's stupid crazy!
+Can anyone even beat that?
+
+
+
+This video series shows a proof of Markov's Inequality. There are multiple Markov's inequalities, the one I'm referring to says that there is no polynomial that can beat the Shev. The proof is really neat and takes us through unexpected areas of mathematics with beautiful connections betwen them. We'll be enjoying the proof in bite-sized portions, following the story of the Shev as it becomes the undisputed champion of the arena. So let's get back to the story.
+
+
+
+The Shev puts on an incredible performance. 25 is the current world record. But what's really impressive about the Shev is how the Shev makes it impossible for most contestants to beat that record. At the heart of its toolset, the Shev uses the fact that every contestant is a polynomial of degree at most 5.
+
+You see, it's a fact that two polynomials that are both of degree at most 5 cannot intersect in more than 5 places. We'll see why that's true in a later video. But as a consequence if you have two curves that intersect at more than 5 places, and you know that one of them is a polynomial of degree at most 5, then that means that the other curve is NOT a polynomial of degree at most 5.
+
+The Shev definitely is a degree-5 polynomial. It doesn't keep it secret, it is 16x^5 - 20x^3 + 5x. And the reason it is so unique is that it goes from -1 to 1 to -1 to 1 to -1 to 1. It is not clear yet how the Shev manages to have such precise movement, I can't even figure out at exactly what value of x it reaches the 1s and -1s just by looking at its formula. We'll ask the Shev about this when we meet it later, but for now let's take a look at some of its best moments.
+
+Perhaps the most eye-catchingly impressive of the Shev's achievements till now is how it dealt with the threat of larger degree-5 polynomials. By this I mean degree 5 polynomials whose degree 5 coefficient is larger than 16, like this one. It makes sense to call these polynomials larger because they do grow faster than the Shev. If x is set to a large value, the larger polynomial will have the larger value at x. So larger polynomials would have an advantage in getting a larger slope.
+
+
+
+Let's take a potential contestant who is a larger polynomial. We don't know that such a thing exists, but it's a possibility for now. Let's see its coefficient of x^5. We know that has to be larger than 16. What the Shev now does is it cleverly enlarges itself a little bit. This is not so that it gets a bigger slope, this is so that it now goes from below -1 to above 1 to below -1 and so on. Any enlarging would have achieved this, so the Shev chooses a small enough enlarging so that the contestant polynomial still has a larger degree 5 coefficient.
+
+Now watch as the contestant goes from the start to the finish line. It has no option but to intersect each of the 5 arcs of the enlarged Shev. And at the finish line it's smaller than the enlarged Shev. Since it's a larger polynomial, it has to eventually be larger than the enlarged Shev, so it has to intersect once more. That's 6 intersections, so this curve here can not be a degree 5 polynomial. This potential contestant we had here cannot exist. We banish it to the realm of the impossible.
+
+
+
+What about other potential contestants? Those with degree-5 coefficients at most 16? Can't one of them defeat the Shev? The issue gets a bit messier here, and the Shev hasn't managed to rule out this possibility completely yet. It has ruled out some special cases though, for example the potential contestant with slope larger than 25 in the last segment.
+
+
+
+So this time the potential contestant has slope larger than 25 somewhere in the last segment, let's assume it's here. The Shev had a neat trick going with forcing 5 intersections, so the Shev will enlarge itself again, but will make sure that its new maximum slope is still smaller than that of the potential contestant. Additionally the Shev slides sideways so that it intersects the contestant at the place where it has a larger slope. This sliding does change the enlarged Shev. If it slides 0.1 to the left, that's the same as changing each x to (x+0.1). At any point, the value of this changed polynomial is the same as the value of the enlarged Shev when the input is 0.1 to the right. Or in other words, this is exactly the enlarged Shev shifted 0.1 to the left, as we wanted. We can expand it, but what's important to note is that the coefficient of the degree 5 term will not change, it's still 17.6. So the shifted enlarged Shev will continue to be larger than the contestant.
+
+Because of this sliding, the contestant might not have to hit each arc of the Shev. It could skip the first arc, but it does have to hit the others because the shifted amount is smaller than the width of the first arc. Notice that the contestant hits the last arc once where its slope is larger, because of how the Shev slid. But then it has to hit the last arc once more before that to be able to hit it with a larger slope. Finally since the shifted enlarged Shev is the larger polynomial, it has to hit it again so that the shifted enlarged Shev overtakes it. That's 6 hits, and so even this kind of contestant can't actually exist.
+
+
+
+This leaves the possibility of contestants that have their degree 5 coefficient at most 16 while having a slope larger than 25 in one of the middle 3 segments. The problem there is that it could force the Shev to slide too much. In that case the contestant might be able to bypass multiple arcs, and so even though it intersects one arc thrice, it still intersects only 5 times overall. The Shev has not yet been able to handle these possible contestants, and has taken a break to go home. In our next episode, we journey to the Shev's hometown to ask it about how it moves so precisely and to see if it has any plans for handling the remaining contestants.
