@@ -1,4 +1,4 @@
-The Shev (Part 0): The Potential Threat of Quantum Brutes
+Part 1: The Potential Threat of Quantum Brutes
 
 Our story starts with password-protected files. We rest easy with the belief that somebody who doesn't have the password will have a hard time unlocking the file. How justified is this belief though?
 
